@@ -1,0 +1,35 @@
+# Central config for the eBird AUK + Ensemble RF SDM pipeline
+
+species: "Dickcissel"
+
+# Years:
+mp_year: 2018        # past/reference year (for deltas & prior range)
+p_year: 2024         # present/current year
+model_year: 2024     # year for mapping/model run (often = p_year)
+horizon_years: 6     # e.g., "future in 6 years" (naming/outputs)
+
+# Study region:
+countries_iso2: ["US", "CA", "MX"]
+breeding_start_mmdd: "06-01"
+breeding_end_mmdd: "07-31"
+
+# Spatial grid:
+grid_resolution_m: 3000
+laea_crs: "+proj=laea +lat_0=45 +lon_0=-100 +datum=WGS84 +units=m +no_defs"
+
+# Modeling:
+ensemble_size: 25
+use_quadratic_terms: false
+max_env_join_km: 10
+presence_hull_buffer_km: 250
+min_pos_for_thr: 25
+fallback_thr: 0.85
+max_neg_ratio: 2
+
+# I/O (relative to repo root):
+paths:
+  raw_ebird_dir: "data-raw/ebird"
+  raw_env_dir: "data-raw/env"
+  processed_dir: "data/processed"
+  outputs_dir: "outputs"
+  shapes_dir: "data-raw/shapes"
