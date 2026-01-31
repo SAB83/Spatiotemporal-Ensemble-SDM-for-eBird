@@ -1,4 +1,4 @@
-# ebird-aukrf-range-shift-sdm
+# ebird-range-shift-sdm
 
 End-to-end pipeline to build **checklist-level detection/non-detection datasets** from eBird (EBD + SED),
 engineer **environmental predictors** (climate, elevation, landcover metrics), and train **ensemble Random
